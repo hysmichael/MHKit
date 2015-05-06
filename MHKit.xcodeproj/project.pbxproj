@@ -8,8 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		4C8884C51ABCD6E7000531AB /* MHKit.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4C8884C41ABCD6E7000531AB /* MHKit.h */; };
-		4C8884C71ABCD6E7000531AB /* MHKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C8884C61ABCD6E7000531AB /* MHKit.m */; };
 		4C8884CD1ABCD6E7000531AB /* libMHKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C8884C11ABCD6E7000531AB /* libMHKit.a */; };
+		4C8884DD1ABCD731000531AB /* MHViewLayoutManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C8884DC1ABCD731000531AB /* MHViewLayoutManager.m */; };
+		4C8884E01ABCD752000531AB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C8884DF1ABCD752000531AB /* UIKit.framework */; };
+		4C8884E41ABCDC87000531AB /* MHTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C8884E31ABCDC87000531AB /* MHTableView.m */; };
+		4C8884EB1ABCDCD6000531AB /* UITableViewCellExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C8884EA1ABCDCD6000531AB /* UITableViewCellExtension.m */; };
+		4CE65B3B1AF9E2ED00C244BC /* MHView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CE65B3A1AF9E2ED00C244BC /* MHView.m */; };
+		4CE65B3F1AF9E37800C244BC /* MHEmptyView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CE65B3E1AF9E37800C244BC /* MHEmptyView.m */; };
+		4CE65B421AF9E3BF00C244BC /* MHKeyboardAdaptiveView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CE65B411AF9E3BF00C244BC /* MHKeyboardAdaptiveView.m */; };
+		4CE65B461AF9E3CE00C244BC /* MHSwitcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CE65B441AF9E3CE00C244BC /* MHSwitcher.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,9 +45,23 @@
 /* Begin PBXFileReference section */
 		4C8884C11ABCD6E7000531AB /* libMHKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libMHKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C8884C41ABCD6E7000531AB /* MHKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MHKit.h; sourceTree = "<group>"; };
-		4C8884C61ABCD6E7000531AB /* MHKit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MHKit.m; sourceTree = "<group>"; };
 		4C8884CC1ABCD6E7000531AB /* MHKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MHKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C8884D21ABCD6E7000531AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4C8884DB1ABCD731000531AB /* MHViewLayoutManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MHViewLayoutManager.h; sourceTree = "<group>"; };
+		4C8884DC1ABCD731000531AB /* MHViewLayoutManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MHViewLayoutManager.m; sourceTree = "<group>"; };
+		4C8884DF1ABCD752000531AB /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		4C8884E21ABCDC87000531AB /* MHTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MHTableView.h; sourceTree = "<group>"; };
+		4C8884E31ABCDC87000531AB /* MHTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MHTableView.m; sourceTree = "<group>"; };
+		4C8884E91ABCDCD6000531AB /* UITableViewCellExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITableViewCellExtension.h; sourceTree = "<group>"; };
+		4C8884EA1ABCDCD6000531AB /* UITableViewCellExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITableViewCellExtension.m; sourceTree = "<group>"; };
+		4CE65B391AF9E2ED00C244BC /* MHView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MHView.h; path = MHKit/MHView.h; sourceTree = "<group>"; };
+		4CE65B3A1AF9E2ED00C244BC /* MHView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MHView.m; path = MHKit/MHView.m; sourceTree = "<group>"; };
+		4CE65B3D1AF9E37800C244BC /* MHEmptyView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MHEmptyView.h; sourceTree = "<group>"; };
+		4CE65B3E1AF9E37800C244BC /* MHEmptyView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MHEmptyView.m; sourceTree = "<group>"; };
+		4CE65B401AF9E3BF00C244BC /* MHKeyboardAdaptiveView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MHKeyboardAdaptiveView.h; sourceTree = "<group>"; };
+		4CE65B411AF9E3BF00C244BC /* MHKeyboardAdaptiveView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MHKeyboardAdaptiveView.m; sourceTree = "<group>"; };
+		4CE65B441AF9E3CE00C244BC /* MHSwitcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MHSwitcher.m; sourceTree = "<group>"; };
+		4CE65B451AF9E3CE00C244BC /* MHSwitcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MHSwitcher.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,6 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C8884E01ABCD752000531AB /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,6 +90,7 @@
 				4C8884C31ABCD6E7000531AB /* MHKit */,
 				4C8884D01ABCD6E7000531AB /* MHKitTests */,
 				4C8884C21ABCD6E7000531AB /* Products */,
+				4C8884E11ABCD75B000531AB /* Framework */,
 			);
 			sourceTree = "<group>";
 		};
@@ -84,7 +107,10 @@
 			isa = PBXGroup;
 			children = (
 				4C8884C41ABCD6E7000531AB /* MHKit.h */,
-				4C8884C61ABCD6E7000531AB /* MHKit.m */,
+				4CE65B3C1AF9E2F300C244BC /* View */,
+				4C8884E51ABCDC8E000531AB /* Table View */,
+				4CE65B431AF9E3C400C244BC /* Control */,
+				4C8884DE1ABCD736000531AB /* Layout Manager */,
 			);
 			path = MHKit;
 			sourceTree = "<group>";
@@ -103,6 +129,58 @@
 				4C8884D21ABCD6E7000531AB /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4C8884DE1ABCD736000531AB /* Layout Manager */ = {
+			isa = PBXGroup;
+			children = (
+				4C8884DB1ABCD731000531AB /* MHViewLayoutManager.h */,
+				4C8884DC1ABCD731000531AB /* MHViewLayoutManager.m */,
+			);
+			name = "Layout Manager";
+			sourceTree = "<group>";
+		};
+		4C8884E11ABCD75B000531AB /* Framework */ = {
+			isa = PBXGroup;
+			children = (
+				4C8884DF1ABCD752000531AB /* UIKit.framework */,
+			);
+			name = Framework;
+			sourceTree = "<group>";
+		};
+		4C8884E51ABCDC8E000531AB /* Table View */ = {
+			isa = PBXGroup;
+			children = (
+				4C8884E21ABCDC87000531AB /* MHTableView.h */,
+				4C8884E31ABCDC87000531AB /* MHTableView.m */,
+				4C8884E91ABCDCD6000531AB /* UITableViewCellExtension.h */,
+				4C8884EA1ABCDCD6000531AB /* UITableViewCellExtension.m */,
+			);
+			name = "Table View";
+			sourceTree = "<group>";
+		};
+		4CE65B3C1AF9E2F300C244BC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4CE65B391AF9E2ED00C244BC /* MHView.h */,
+				4CE65B3A1AF9E2ED00C244BC /* MHView.m */,
+				4CE65B3D1AF9E37800C244BC /* MHEmptyView.h */,
+				4CE65B3E1AF9E37800C244BC /* MHEmptyView.m */,
+				4CE65B401AF9E3BF00C244BC /* MHKeyboardAdaptiveView.h */,
+				4CE65B411AF9E3BF00C244BC /* MHKeyboardAdaptiveView.m */,
+			);
+			name = View;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		4CE65B431AF9E3C400C244BC /* Control */ = {
+			isa = PBXGroup;
+			children = (
+				4CE65B451AF9E3CE00C244BC /* MHSwitcher.h */,
+				4CE65B441AF9E3CE00C244BC /* MHSwitcher.m */,
+			);
+			name = Control;
+			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -193,7 +271,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4C8884C71ABCD6E7000531AB /* MHKit.m in Sources */,
+				4C8884E41ABCDC87000531AB /* MHTableView.m in Sources */,
+				4C8884DD1ABCD731000531AB /* MHViewLayoutManager.m in Sources */,
+				4CE65B421AF9E3BF00C244BC /* MHKeyboardAdaptiveView.m in Sources */,
+				4C8884EB1ABCDCD6000531AB /* UITableViewCellExtension.m in Sources */,
+				4CE65B3B1AF9E2ED00C244BC /* MHView.m in Sources */,
+				4CE65B461AF9E3CE00C244BC /* MHSwitcher.m in Sources */,
+				4CE65B3F1AF9E37800C244BC /* MHEmptyView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -356,6 +440,7 @@
 				4C8884D71ABCD6E7000531AB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4C8884D81ABCD6E7000531AB /* Build configuration list for PBXNativeTarget "MHKitTests" */ = {
 			isa = XCConfigurationList;
@@ -364,6 +449,7 @@
 				4C8884DA1ABCD6E7000531AB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
