@@ -14,9 +14,9 @@
 		4C8884E41ABCDC87000531AB /* MHTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C8884E31ABCDC87000531AB /* MHTableView.m */; };
 		4C8884EB1ABCDCD6000531AB /* UITableViewCellExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C8884EA1ABCDCD6000531AB /* UITableViewCellExtension.m */; };
 		4CE65B3B1AF9E2ED00C244BC /* MHView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CE65B3A1AF9E2ED00C244BC /* MHView.m */; };
-		4CE65B3F1AF9E37800C244BC /* MHEmptyView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CE65B3E1AF9E37800C244BC /* MHEmptyView.m */; };
-		4CE65B421AF9E3BF00C244BC /* MHKeyboardAdaptiveView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CE65B411AF9E3BF00C244BC /* MHKeyboardAdaptiveView.m */; };
-		4CE65B461AF9E3CE00C244BC /* MHSwitcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CE65B441AF9E3CE00C244BC /* MHSwitcher.m */; };
+		4CE65B4B1AF9E5E600C244BC /* MHEmptyView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CE65B481AF9E5E600C244BC /* MHEmptyView.m */; };
+		4CE65B4C1AF9E5E600C244BC /* MHKeyboardAdaptiveView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CE65B4A1AF9E5E600C244BC /* MHKeyboardAdaptiveView.m */; };
+		4CE65B4F1AF9E5EE00C244BC /* MHSwitcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CE65B4E1AF9E5EE00C244BC /* MHSwitcher.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,12 +56,12 @@
 		4C8884EA1ABCDCD6000531AB /* UITableViewCellExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITableViewCellExtension.m; sourceTree = "<group>"; };
 		4CE65B391AF9E2ED00C244BC /* MHView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MHView.h; path = MHKit/MHView.h; sourceTree = "<group>"; };
 		4CE65B3A1AF9E2ED00C244BC /* MHView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MHView.m; path = MHKit/MHView.m; sourceTree = "<group>"; };
-		4CE65B3D1AF9E37800C244BC /* MHEmptyView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MHEmptyView.h; sourceTree = "<group>"; };
-		4CE65B3E1AF9E37800C244BC /* MHEmptyView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MHEmptyView.m; sourceTree = "<group>"; };
-		4CE65B401AF9E3BF00C244BC /* MHKeyboardAdaptiveView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MHKeyboardAdaptiveView.h; sourceTree = "<group>"; };
-		4CE65B411AF9E3BF00C244BC /* MHKeyboardAdaptiveView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MHKeyboardAdaptiveView.m; sourceTree = "<group>"; };
-		4CE65B441AF9E3CE00C244BC /* MHSwitcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MHSwitcher.m; sourceTree = "<group>"; };
-		4CE65B451AF9E3CE00C244BC /* MHSwitcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MHSwitcher.h; sourceTree = "<group>"; };
+		4CE65B471AF9E5E600C244BC /* MHEmptyView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MHEmptyView.h; path = MHKit/MHEmptyView.h; sourceTree = "<group>"; };
+		4CE65B481AF9E5E600C244BC /* MHEmptyView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MHEmptyView.m; path = MHKit/MHEmptyView.m; sourceTree = "<group>"; };
+		4CE65B491AF9E5E600C244BC /* MHKeyboardAdaptiveView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MHKeyboardAdaptiveView.h; path = MHKit/MHKeyboardAdaptiveView.h; sourceTree = "<group>"; };
+		4CE65B4A1AF9E5E600C244BC /* MHKeyboardAdaptiveView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MHKeyboardAdaptiveView.m; path = MHKit/MHKeyboardAdaptiveView.m; sourceTree = "<group>"; };
+		4CE65B4D1AF9E5EE00C244BC /* MHSwitcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MHSwitcher.h; path = MHKit/MHSwitcher.h; sourceTree = "<group>"; };
+		4CE65B4E1AF9E5EE00C244BC /* MHSwitcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MHSwitcher.m; path = MHKit/MHSwitcher.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,10 +164,10 @@
 			children = (
 				4CE65B391AF9E2ED00C244BC /* MHView.h */,
 				4CE65B3A1AF9E2ED00C244BC /* MHView.m */,
-				4CE65B3D1AF9E37800C244BC /* MHEmptyView.h */,
-				4CE65B3E1AF9E37800C244BC /* MHEmptyView.m */,
-				4CE65B401AF9E3BF00C244BC /* MHKeyboardAdaptiveView.h */,
-				4CE65B411AF9E3BF00C244BC /* MHKeyboardAdaptiveView.m */,
+				4CE65B471AF9E5E600C244BC /* MHEmptyView.h */,
+				4CE65B481AF9E5E600C244BC /* MHEmptyView.m */,
+				4CE65B491AF9E5E600C244BC /* MHKeyboardAdaptiveView.h */,
+				4CE65B4A1AF9E5E600C244BC /* MHKeyboardAdaptiveView.m */,
 			);
 			name = View;
 			path = ..;
@@ -176,8 +176,8 @@
 		4CE65B431AF9E3C400C244BC /* Control */ = {
 			isa = PBXGroup;
 			children = (
-				4CE65B451AF9E3CE00C244BC /* MHSwitcher.h */,
-				4CE65B441AF9E3CE00C244BC /* MHSwitcher.m */,
+				4CE65B4D1AF9E5EE00C244BC /* MHSwitcher.h */,
+				4CE65B4E1AF9E5EE00C244BC /* MHSwitcher.m */,
 			);
 			name = Control;
 			path = ..;
@@ -271,13 +271,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4CE65B4C1AF9E5E600C244BC /* MHKeyboardAdaptiveView.m in Sources */,
 				4C8884E41ABCDC87000531AB /* MHTableView.m in Sources */,
+				4CE65B4B1AF9E5E600C244BC /* MHEmptyView.m in Sources */,
 				4C8884DD1ABCD731000531AB /* MHViewLayoutManager.m in Sources */,
-				4CE65B421AF9E3BF00C244BC /* MHKeyboardAdaptiveView.m in Sources */,
 				4C8884EB1ABCDCD6000531AB /* UITableViewCellExtension.m in Sources */,
+				4CE65B4F1AF9E5EE00C244BC /* MHSwitcher.m in Sources */,
 				4CE65B3B1AF9E2ED00C244BC /* MHView.m in Sources */,
-				4CE65B461AF9E3CE00C244BC /* MHSwitcher.m in Sources */,
-				4CE65B3F1AF9E37800C244BC /* MHEmptyView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
