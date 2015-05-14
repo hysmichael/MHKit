@@ -17,6 +17,7 @@
 		4CE65B4B1AF9E5E600C244BC /* MHEmptyView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CE65B481AF9E5E600C244BC /* MHEmptyView.m */; };
 		4CE65B4C1AF9E5E600C244BC /* MHKeyboardAdaptiveView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CE65B4A1AF9E5E600C244BC /* MHKeyboardAdaptiveView.m */; };
 		4CE65B4F1AF9E5EE00C244BC /* MHSwitcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CE65B4E1AF9E5EE00C244BC /* MHSwitcher.m */; };
+		4CF422531B0428590001F47B /* UIView+MHLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CF422521B0428590001F47B /* UIView+MHLayout.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,8 @@
 		4CE65B4A1AF9E5E600C244BC /* MHKeyboardAdaptiveView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MHKeyboardAdaptiveView.m; path = MHKit/MHKeyboardAdaptiveView.m; sourceTree = "<group>"; };
 		4CE65B4D1AF9E5EE00C244BC /* MHSwitcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MHSwitcher.h; path = MHKit/MHSwitcher.h; sourceTree = "<group>"; };
 		4CE65B4E1AF9E5EE00C244BC /* MHSwitcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MHSwitcher.m; path = MHKit/MHSwitcher.m; sourceTree = "<group>"; };
+		4CF422511B0428590001F47B /* UIView+MHLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+MHLayout.h"; sourceTree = "<group>"; };
+		4CF422521B0428590001F47B /* UIView+MHLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+MHLayout.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +139,8 @@
 			children = (
 				4C8884DB1ABCD731000531AB /* MHViewLayoutManager.h */,
 				4C8884DC1ABCD731000531AB /* MHViewLayoutManager.m */,
+				4CF422511B0428590001F47B /* UIView+MHLayout.h */,
+				4CF422521B0428590001F47B /* UIView+MHLayout.m */,
 			);
 			name = "Layout Manager";
 			sourceTree = "<group>";
@@ -274,6 +279,7 @@
 				4CE65B4C1AF9E5E600C244BC /* MHKeyboardAdaptiveView.m in Sources */,
 				4C8884E41ABCDC87000531AB /* MHTableView.m in Sources */,
 				4CE65B4B1AF9E5E600C244BC /* MHEmptyView.m in Sources */,
+				4CF422531B0428590001F47B /* UIView+MHLayout.m in Sources */,
 				4C8884DD1ABCD731000531AB /* MHViewLayoutManager.m in Sources */,
 				4C8884EB1ABCDCD6000531AB /* UITableViewCellExtension.m in Sources */,
 				4CE65B4F1AF9E5EE00C244BC /* MHSwitcher.m in Sources */,
