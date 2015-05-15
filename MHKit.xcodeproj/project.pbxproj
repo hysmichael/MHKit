@@ -137,10 +137,10 @@
 		4C8884DE1ABCD736000531AB /* Layout Manager */ = {
 			isa = PBXGroup;
 			children = (
-				4C8884DB1ABCD731000531AB /* MHViewLayoutManager.h */,
-				4C8884DC1ABCD731000531AB /* MHViewLayoutManager.m */,
 				4CF422511B0428590001F47B /* UIView+MHLayout.h */,
 				4CF422521B0428590001F47B /* UIView+MHLayout.m */,
+				4C8884DB1ABCD731000531AB /* MHViewLayoutManager.h */,
+				4C8884DC1ABCD731000531AB /* MHViewLayoutManager.m */,
 			);
 			name = "Layout Manager";
 			sourceTree = "<group>";

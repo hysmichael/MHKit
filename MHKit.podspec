@@ -23,6 +23,7 @@ Pod::Spec.new do |s|
                    A longer description of MHKit in Markdown format.
 
                    * This pod is a wrapper for several handy tools I implemented along my iOS projects to expediate the development process.
+                   DESC
 
   s.homepage     = "https://github.com/hysmichael/MHKit"
   # s.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
@@ -74,7 +75,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/hysmichael/MHKit", :tag => "0.1" }
+  s.source       = { :git => "https://github.com/hysmichael/MHKit.git", :tag => "0.1" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #

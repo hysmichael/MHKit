@@ -51,8 +51,14 @@ typedef int MHViewLayoutDirection;
 
 @property CGPoint cursor;
 
+/* managing virtual subcontainers chain */
+@property (nonatomic, strong) MHViewLayoutManager * parentLayoutManager;
+
 - (instancetype) initWithContainerView:(UIView *)view;
+- (instancetype) initWithContainerView:(UIView *)view parentLayoutManager: (MHViewLayoutManager *) manager;
 - (void) resetToView:(UIView *)view;
+
+- (CGRect) containerFrameInParentLayoutContext;
 
 - (CGPoint) pointOfPosition:(MHViewLayoutPosition)position;
 - (CGPoint) pointOfContainerPosition:(MHViewLayoutPosition)position applyGuideLine:(MHViewLayoutGuideLine)guideline;

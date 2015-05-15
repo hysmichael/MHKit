@@ -46,10 +46,15 @@
 
 
 @interface MHViewLayoutManager()
+
+/* relative position of current (0,0) in the context of the root layout manager */
+@property CGPoint layoutOrigin;
+
 @property CGFloat containerWidth;
 @property CGFloat containerHeight;
 @property NSMutableArray *cursorHistory;
 @property CGRect lastFrame;
+
 @end
 
 @implementation MHViewLayoutManager
@@ -62,6 +67,16 @@
     return self;
 }
 
+- (instancetype)initWithContainerView:(UIView *)view parentLayoutManager:(MHViewLayoutManager *)manager {
+    self = [super init];
+    if (self) {
+        [self resetToView:view];
+        self.parentLayoutManager = manager;
+        self.layoutOrigin = CGPointMake(manager.layoutOrigin.x + view.frame.origin.x, manager.layoutOrigin.y + view.frame.origin.y);
+    }
+    return self;
+}
+
 - (void)resetToView:(UIView *)view {
     self.containerWidth = view.frame.size.width;
     self.containerHeight = view.frame.size.height;
@@ -70,6 +85,12 @@
     self.cursor = CGPointMake(0, 0);
     self.cursorHistory = [[NSMutableArray alloc] init];
     self.lastFrame = view.frame;
+    self.layoutOrigin = CGPointMake(0.0, 0.0);
+    self.parentLayoutManager = nil;
+}
+
+- (CGRect) containerFrameInParentLayoutContext {
+    return (CGRect){self.layoutOrigin, CGSizeMake(self.containerWidth, self.containerHeight)};
 }
 
 #pragma mark - Primitives
@@ -284,10 +305,18 @@
 }
 
 #pragma mark - Setting Frames
+- (CGRect)transformRectToRootLayoutManagerCoordinates: (CGRect) frameInCurrentContext {
+    if (!self.parentLayoutManager) return frameInCurrentContext; // no virtual containers in play
+    CGRect frameInRootContext = frameInCurrentContext;
+    frameInRootContext.origin.x += self.layoutOrigin.x;
+    frameInRootContext.origin.y += self.layoutOrigin.y;
+    return frameInRootContext;
+}
+
 - (CGRect)setView:(UIView *)view width:(MHViewLayoutLength)w_para height:(MHViewLayoutLength)h_para respectToPosition:(MHViewLayoutPosition)position applyGuideLine:(MHViewLayoutGuideLine)guideline {
     CGSize size = [self convertLayoutLength:CGSizeMake(w_para, h_para) direction:[self directionFromPosition:position] applyGuideLine:guideline];
     CGPoint origin = [self originOfPoint:self.cursor rectSize:size position:position];
-    CGRect rect = (CGRect){origin, size};
+    CGRect rect = [self transformRectToRootLayoutManagerCoordinates:(CGRect){origin, size}];
     view.frame = rect;
     self.lastFrame = rect;
     return rect;
@@ -297,7 +326,7 @@
     CGSize size = [self convertLayoutLength:CGSizeMake(w_para, NEGLECTED) direction:[self directionFromPosition:position] applyGuideLine:guideline];
     size.height = size.width * ratio;
     CGPoint origin = [self originOfPoint:self.cursor rectSize:size position:position];
-    CGRect rect = (CGRect){origin, size};
+    CGRect rect = [self transformRectToRootLayoutManagerCoordinates:(CGRect){origin, size}];
     view.frame = rect;
     self.lastFrame = rect;
     return rect;
@@ -307,7 +336,7 @@
     CGSize size = [self convertLayoutLength:CGSizeMake(NEGLECTED, h_para) direction:[self directionFromPosition:position] applyGuideLine:guideline];
     size.width = size.height * ratio;
     CGPoint origin = [self originOfPoint:self.cursor rectSize:size position:position];
-    CGRect rect = (CGRect){origin, size};
+    CGRect rect = [self transformRectToRootLayoutManagerCoordinates:(CGRect){origin, size}];
     view.frame = rect;
     self.lastFrame = rect;
     return rect;
@@ -316,7 +345,7 @@
 - (CGRect)setView:(UIView *)view respectToPoint:(CGPoint)point {
     CGSize size = CGSizeMake(ABS(self.cursor.x - point.x), ABS(self.cursor.y - point.y));
     CGPoint origin = CGPointMake(MIN(self.cursor.x, point.x), MIN(self.cursor.y, point.y));
-    CGRect rect = (CGRect){origin, size};
+    CGRect rect = [self transformRectToRootLayoutManagerCoordinates:(CGRect){origin, size}];
     view.frame = rect;
     self.lastFrame = rect;
     return rect;
