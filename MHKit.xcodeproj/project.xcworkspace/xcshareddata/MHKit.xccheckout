@@ -12,6 +12,8 @@
 	<dict>
 		<key>26DD1E4A17F2B1DA542BE86EEAA16C7F0AD3BA43</key>
 		<string>https://github.com/hysmichael/MHKit.git</string>
+		<key>DCD2E498902D0AD42339CCBBA6A7C3C32E0DD5DD</key>
+		<string>https://bitbucket.org/tobiaslei/stylepuzzleios.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>MHKit.xcodeproj</string>
@@ -19,6 +21,8 @@
 	<dict>
 		<key>26DD1E4A17F2B1DA542BE86EEAA16C7F0AD3BA43</key>
 		<string>../..</string>
+		<key>DCD2E498902D0AD42339CCBBA6A7C3C32E0DD5DD</key>
+		<string>../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/hysmichael/MHKit.git</string>
@@ -28,6 +32,14 @@
 	<string>26DD1E4A17F2B1DA542BE86EEAA16C7F0AD3BA43</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>DCD2E498902D0AD42339CCBBA6A7C3C32E0DD5DD</string>
+			<key>IDESourceControlWCCName</key>
+			<string></string>
+		</dict>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
