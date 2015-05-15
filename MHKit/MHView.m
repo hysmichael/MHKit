@@ -33,6 +33,7 @@
     self.layout_block = nil;
     self.layoutLeftRightGuideLine = 10.0;
     self.layoutUpDownGuideline = 10.0;
+    self.backgroundColor = [UIColor clearColor];
 }
 
 - (void)drawRect:(CGRect)rect {
