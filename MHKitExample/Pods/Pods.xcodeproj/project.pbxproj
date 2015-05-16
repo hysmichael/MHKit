@@ -1,0 +1,491 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		25E7813D5B80F262A9110F1C /* MHTableView.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D8AC48C42A3B9E5DB3FD26E /* MHTableView.h */; };
+		2FFAAE9651C6AC0EE508B886 /* UITableViewCellExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 378A66CB6E3B1A55E10F63C5 /* UITableViewCellExtension.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-checker -Xanalyzer deadcode"; }; };
+		32F3E109E2D7BD6466D1D475 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4E519C0F74DEB21D579B46F /* Foundation.framework */; };
+		3C507924C05DF0FF43BCC00C /* MHViewLayoutManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B6C14B484C929E052C49DB8 /* MHViewLayoutManager.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-checker -Xanalyzer deadcode"; }; };
+		3EB3EA6918FC186D6328E240 /* MHEmptyView.m in Sources */ = {isa = PBXBuildFile; fileRef = 62CFA12EE9EF3FC0F8725E52 /* MHEmptyView.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-checker -Xanalyzer deadcode"; }; };
+		468D7E5179EEA8E64329249F /* Pods-MHKitExample-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D2D7E8EA926D6840E64D00E /* Pods-MHKitExample-dummy.m */; };
+		5A0F811573D5775391416C38 /* UIView+MHLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B3E1D3723057D729674777B /* UIView+MHLayout.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-checker -Xanalyzer deadcode"; }; };
+		695B12F139D3A81DBA58B731 /* UITableViewCellExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 92265B97FF7BC149E42CB8B0 /* UITableViewCellExtension.h */; };
+		6E17C822900C0C8F984CCF81 /* MHTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 601288B2D816150B5C334C00 /* MHTableView.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-checker -Xanalyzer deadcode"; }; };
+		867B2A5560678D706AD4B1F0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4E519C0F74DEB21D579B46F /* Foundation.framework */; };
+		883EE4739D939B41E1F292DF /* MHSwitcher.h in Headers */ = {isa = PBXBuildFile; fileRef = 868C742800AB16BB05802D95 /* MHSwitcher.h */; };
+		9EC057FB409CAD75991BC9A7 /* Pods-MHKitExample-MHKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A3EAC9721B3854908A6A8CDB /* Pods-MHKitExample-MHKit-dummy.m */; };
+		A372578A394B7BE1D0A3E9D8 /* MHView.m in Sources */ = {isa = PBXBuildFile; fileRef = D600BDD002A0D57A54003CD0 /* MHView.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-checker -Xanalyzer deadcode"; }; };
+		B6C6E32019972ACB4C75380F /* MHSwitcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 096B15940233BFE23B10BD21 /* MHSwitcher.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-checker -Xanalyzer deadcode"; }; };
+		CDD4F669DB3E07D02962555F /* MHKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 186A5C9BB883ED3427B8DCC3 /* MHKit.h */; };
+		E1FE1945B04DA48469340703 /* MHView.h in Headers */ = {isa = PBXBuildFile; fileRef = 8F729851810E05C6D2BFA562 /* MHView.h */; };
+		E74D8F61DBBD4B29191C78E7 /* UIView+MHLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 791CA245D27FB71A9FC5B1FC /* UIView+MHLayout.h */; };
+		E88F87A0A8F0300CD6166119 /* MHKeyboardAdaptiveView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5943D216DA90D564680A220C /* MHKeyboardAdaptiveView.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-checker -Xanalyzer deadcode"; }; };
+		F356FACF4D8BC2DEE9561493 /* MHViewLayoutManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CDDD894FC3B1EF2ADF444BF /* MHViewLayoutManager.h */; };
+		FD7A22DE96C0ED1495B4D09E /* MHKeyboardAdaptiveView.h in Headers */ = {isa = PBXBuildFile; fileRef = 445E1AA15D3E22A3AED93CA9 /* MHKeyboardAdaptiveView.h */; };
+		FEE1B34357D494A07E985418 /* MHEmptyView.h in Headers */ = {isa = PBXBuildFile; fileRef = B508768956E97050A34EFEB0 /* MHEmptyView.h */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B71D0A44700D4A2A242AB9DD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1351D8DCD1634E0DADC2E009 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DA178E859181C4224C32E845;
+			remoteInfo = "Pods-MHKitExample-MHKit";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		096B15940233BFE23B10BD21 /* MHSwitcher.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MHSwitcher.m; path = MHKit/MHSwitcher.m; sourceTree = "<group>"; };
+		0A970CA93B469EE820338FFF /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		0B6C14B484C929E052C49DB8 /* MHViewLayoutManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MHViewLayoutManager.m; path = MHKit/MHViewLayoutManager.m; sourceTree = "<group>"; };
+		186A5C9BB883ED3427B8DCC3 /* MHKit.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MHKit.h; path = MHKit/MHKit.h; sourceTree = "<group>"; };
+		35903E8C383478F95742EB24 /* libPods-MHKitExample-MHKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MHKitExample-MHKit.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		369510FB9319BB65A04CE4B2 /* Pods-MHKitExample-environment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MHKitExample-environment.h"; sourceTree = "<group>"; };
+		378A66CB6E3B1A55E10F63C5 /* UITableViewCellExtension.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = UITableViewCellExtension.m; path = MHKit/UITableViewCellExtension.m; sourceTree = "<group>"; };
+		3B3E1D3723057D729674777B /* UIView+MHLayout.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIView+MHLayout.m"; path = "MHKit/UIView+MHLayout.m"; sourceTree = "<group>"; };
+		3D8AC48C42A3B9E5DB3FD26E /* MHTableView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MHTableView.h; path = MHKit/MHTableView.h; sourceTree = "<group>"; };
+		445E1AA15D3E22A3AED93CA9 /* MHKeyboardAdaptiveView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MHKeyboardAdaptiveView.h; path = MHKit/MHKeyboardAdaptiveView.h; sourceTree = "<group>"; };
+		5943D216DA90D564680A220C /* MHKeyboardAdaptiveView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MHKeyboardAdaptiveView.m; path = MHKit/MHKeyboardAdaptiveView.m; sourceTree = "<group>"; };
+		601288B2D816150B5C334C00 /* MHTableView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MHTableView.m; path = MHKit/MHTableView.m; sourceTree = "<group>"; };
+		62CFA12EE9EF3FC0F8725E52 /* MHEmptyView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MHEmptyView.m; path = MHKit/MHEmptyView.m; sourceTree = "<group>"; };
+		6926FBFD13CB78510FE544D7 /* Pods-MHKitExample-MHKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MHKitExample-MHKit.xcconfig"; sourceTree = "<group>"; };
+		6ECC0180F17B6F61A79DC59A /* Pods-MHKitExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MHKitExample.debug.xcconfig"; sourceTree = "<group>"; };
+		791CA245D27FB71A9FC5B1FC /* UIView+MHLayout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView+MHLayout.h"; path = "MHKit/UIView+MHLayout.h"; sourceTree = "<group>"; };
+		7DDFBD6A3DDCC46617ED68C9 /* Pods-MHKitExample-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MHKitExample-acknowledgements.markdown"; sourceTree = "<group>"; };
+		868C742800AB16BB05802D95 /* MHSwitcher.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MHSwitcher.h; path = MHKit/MHSwitcher.h; sourceTree = "<group>"; };
+		8F729851810E05C6D2BFA562 /* MHView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MHView.h; path = MHKit/MHView.h; sourceTree = "<group>"; };
+		92265B97FF7BC149E42CB8B0 /* UITableViewCellExtension.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = UITableViewCellExtension.h; path = MHKit/UITableViewCellExtension.h; sourceTree = "<group>"; };
+		9CDDD894FC3B1EF2ADF444BF /* MHViewLayoutManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MHViewLayoutManager.h; path = MHKit/MHViewLayoutManager.h; sourceTree = "<group>"; };
+		9D2D7E8EA926D6840E64D00E /* Pods-MHKitExample-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MHKitExample-dummy.m"; sourceTree = "<group>"; };
+		9D8D47D71315343C2DC95561 /* Pods-MHKitExample-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MHKitExample-acknowledgements.plist"; sourceTree = "<group>"; };
+		A3EAC9721B3854908A6A8CDB /* Pods-MHKitExample-MHKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MHKitExample-MHKit-dummy.m"; sourceTree = "<group>"; };
+		AAB3D4E26464B7E5EAE4E26B /* Pods-MHKitExample-MHKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MHKitExample-MHKit-prefix.pch"; sourceTree = "<group>"; };
+		B0DDF4E69E9F0EBBB8AB3D2E /* Pods-MHKitExample-MHKit-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MHKitExample-MHKit-Private.xcconfig"; sourceTree = "<group>"; };
+		B508768956E97050A34EFEB0 /* MHEmptyView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MHEmptyView.h; path = MHKit/MHEmptyView.h; sourceTree = "<group>"; };
+		CAD0442906700D40AB5DC6E9 /* libPods-MHKitExample.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MHKitExample.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D4E519C0F74DEB21D579B46F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		D600BDD002A0D57A54003CD0 /* MHView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MHView.m; path = MHKit/MHView.m; sourceTree = "<group>"; };
+		DF962E65BA13CDC92570B6C8 /* Pods-MHKitExample-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MHKitExample-resources.sh"; sourceTree = "<group>"; };
+		E9762B738F1E03D168D94A67 /* Pods-MHKitExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MHKitExample.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		82AC3EF2974E63A95B701209 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				867B2A5560678D706AD4B1F0 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D840782AC1C72223CC5C76C9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				32F3E109E2D7BD6466D1D475 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		011D5D9E481B471CC3732AEF /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				6926FBFD13CB78510FE544D7 /* Pods-MHKitExample-MHKit.xcconfig */,
+				B0DDF4E69E9F0EBBB8AB3D2E /* Pods-MHKitExample-MHKit-Private.xcconfig */,
+				A3EAC9721B3854908A6A8CDB /* Pods-MHKitExample-MHKit-dummy.m */,
+				AAB3D4E26464B7E5EAE4E26B /* Pods-MHKitExample-MHKit-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Pods-MHKitExample-MHKit";
+			sourceTree = "<group>";
+		};
+		040CC6278A451FB5CFDAA527 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				BC57E2C5FDEFB6CE1F950ADE /* Pods-MHKitExample */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		1DA85C40FB93B31B95BAA23D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2FDFB9027F8A1C8C96E2534B /* MHKit */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		2FDFB9027F8A1C8C96E2534B /* MHKit */ = {
+			isa = PBXGroup;
+			children = (
+				B508768956E97050A34EFEB0 /* MHEmptyView.h */,
+				62CFA12EE9EF3FC0F8725E52 /* MHEmptyView.m */,
+				445E1AA15D3E22A3AED93CA9 /* MHKeyboardAdaptiveView.h */,
+				5943D216DA90D564680A220C /* MHKeyboardAdaptiveView.m */,
+				186A5C9BB883ED3427B8DCC3 /* MHKit.h */,
+				868C742800AB16BB05802D95 /* MHSwitcher.h */,
+				096B15940233BFE23B10BD21 /* MHSwitcher.m */,
+				3D8AC48C42A3B9E5DB3FD26E /* MHTableView.h */,
+				601288B2D816150B5C334C00 /* MHTableView.m */,
+				8F729851810E05C6D2BFA562 /* MHView.h */,
+				D600BDD002A0D57A54003CD0 /* MHView.m */,
+				9CDDD894FC3B1EF2ADF444BF /* MHViewLayoutManager.h */,
+				0B6C14B484C929E052C49DB8 /* MHViewLayoutManager.m */,
+				92265B97FF7BC149E42CB8B0 /* UITableViewCellExtension.h */,
+				378A66CB6E3B1A55E10F63C5 /* UITableViewCellExtension.m */,
+				791CA245D27FB71A9FC5B1FC /* UIView+MHLayout.h */,
+				3B3E1D3723057D729674777B /* UIView+MHLayout.m */,
+				011D5D9E481B471CC3732AEF /* Support Files */,
+			);
+			path = MHKit;
+			sourceTree = "<group>";
+		};
+		6FEC3C9BC84EB104F6A4A8EB = {
+			isa = PBXGroup;
+			children = (
+				0A970CA93B469EE820338FFF /* Podfile */,
+				BA64876E6CA93E90FD58597F /* Frameworks */,
+				1DA85C40FB93B31B95BAA23D /* Pods */,
+				E8E74F3C39C56FCAABA18916 /* Products */,
+				040CC6278A451FB5CFDAA527 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		BA64876E6CA93E90FD58597F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C98A265E87D8A642F72B09FA /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BC57E2C5FDEFB6CE1F950ADE /* Pods-MHKitExample */ = {
+			isa = PBXGroup;
+			children = (
+				7DDFBD6A3DDCC46617ED68C9 /* Pods-MHKitExample-acknowledgements.markdown */,
+				9D8D47D71315343C2DC95561 /* Pods-MHKitExample-acknowledgements.plist */,
+				9D2D7E8EA926D6840E64D00E /* Pods-MHKitExample-dummy.m */,
+				369510FB9319BB65A04CE4B2 /* Pods-MHKitExample-environment.h */,
+				DF962E65BA13CDC92570B6C8 /* Pods-MHKitExample-resources.sh */,
+				6ECC0180F17B6F61A79DC59A /* Pods-MHKitExample.debug.xcconfig */,
+				E9762B738F1E03D168D94A67 /* Pods-MHKitExample.release.xcconfig */,
+			);
+			name = "Pods-MHKitExample";
+			path = "Target Support Files/Pods-MHKitExample";
+			sourceTree = "<group>";
+		};
+		C98A265E87D8A642F72B09FA /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				D4E519C0F74DEB21D579B46F /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		E8E74F3C39C56FCAABA18916 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CAD0442906700D40AB5DC6E9 /* libPods-MHKitExample.a */,
+				35903E8C383478F95742EB24 /* libPods-MHKitExample-MHKit.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		8293E64D6572DC5E8819511E /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FEE1B34357D494A07E985418 /* MHEmptyView.h in Headers */,
+				FD7A22DE96C0ED1495B4D09E /* MHKeyboardAdaptiveView.h in Headers */,
+				CDD4F669DB3E07D02962555F /* MHKit.h in Headers */,
+				883EE4739D939B41E1F292DF /* MHSwitcher.h in Headers */,
+				25E7813D5B80F262A9110F1C /* MHTableView.h in Headers */,
+				E1FE1945B04DA48469340703 /* MHView.h in Headers */,
+				F356FACF4D8BC2DEE9561493 /* MHViewLayoutManager.h in Headers */,
+				695B12F139D3A81DBA58B731 /* UITableViewCellExtension.h in Headers */,
+				E74D8F61DBBD4B29191C78E7 /* UIView+MHLayout.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		BEB87DFEEF51D4A6D70033E1 /* Pods-MHKitExample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 71EC5ED293053DEC5EFD893B /* Build configuration list for PBXNativeTarget "Pods-MHKitExample" */;
+			buildPhases = (
+				0D35D4AE17F145A5C11C6289 /* Sources */,
+				82AC3EF2974E63A95B701209 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				48E114707343D72F9860486F /* PBXTargetDependency */,
+			);
+			name = "Pods-MHKitExample";
+			productName = "Pods-MHKitExample";
+			productReference = CAD0442906700D40AB5DC6E9 /* libPods-MHKitExample.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		DA178E859181C4224C32E845 /* Pods-MHKitExample-MHKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 098CFF6A1D709A81F09957E5 /* Build configuration list for PBXNativeTarget "Pods-MHKitExample-MHKit" */;
+			buildPhases = (
+				CE8EF3D862954D844FBF0199 /* Sources */,
+				D840782AC1C72223CC5C76C9 /* Frameworks */,
+				8293E64D6572DC5E8819511E /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-MHKitExample-MHKit";
+			productName = "Pods-MHKitExample-MHKit";
+			productReference = 35903E8C383478F95742EB24 /* libPods-MHKitExample-MHKit.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1351D8DCD1634E0DADC2E009 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+			};
+			buildConfigurationList = DF48A02502D433CA245E0696 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 6FEC3C9BC84EB104F6A4A8EB;
+			productRefGroup = E8E74F3C39C56FCAABA18916 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BEB87DFEEF51D4A6D70033E1 /* Pods-MHKitExample */,
+				DA178E859181C4224C32E845 /* Pods-MHKitExample-MHKit */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0D35D4AE17F145A5C11C6289 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				468D7E5179EEA8E64329249F /* Pods-MHKitExample-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE8EF3D862954D844FBF0199 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3EB3EA6918FC186D6328E240 /* MHEmptyView.m in Sources */,
+				E88F87A0A8F0300CD6166119 /* MHKeyboardAdaptiveView.m in Sources */,
+				B6C6E32019972ACB4C75380F /* MHSwitcher.m in Sources */,
+				6E17C822900C0C8F984CCF81 /* MHTableView.m in Sources */,
+				A372578A394B7BE1D0A3E9D8 /* MHView.m in Sources */,
+				3C507924C05DF0FF43BCC00C /* MHViewLayoutManager.m in Sources */,
+				9EC057FB409CAD75991BC9A7 /* Pods-MHKitExample-MHKit-dummy.m in Sources */,
+				2FFAAE9651C6AC0EE508B886 /* UITableViewCellExtension.m in Sources */,
+				5A0F811573D5775391416C38 /* UIView+MHLayout.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		48E114707343D72F9860486F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-MHKitExample-MHKit";
+			target = DA178E859181C4224C32E845 /* Pods-MHKitExample-MHKit */;
+			targetProxy = B71D0A44700D4A2A242AB9DD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		13906BE02B5BF981D2B872F4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E9762B738F1E03D168D94A67 /* Pods-MHKitExample.release.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		41AA7C1492D56D9311566C11 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		6E224144A3A611D6292B405E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = "RELEASE=1";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7774D6D191930BD629181CB9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6ECC0180F17B6F61A79DC59A /* Pods-MHKitExample.debug.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		90588D7FF0565E3CF136B9A0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B0DDF4E69E9F0EBBB8AB3D2E /* Pods-MHKitExample-MHKit-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-MHKitExample-MHKit/Pods-MHKitExample-MHKit-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		E1876F7017BF2D86E9FB1C91 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B0DDF4E69E9F0EBBB8AB3D2E /* Pods-MHKitExample-MHKit-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-MHKitExample-MHKit/Pods-MHKitExample-MHKit-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		098CFF6A1D709A81F09957E5 /* Build configuration list for PBXNativeTarget "Pods-MHKitExample-MHKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E1876F7017BF2D86E9FB1C91 /* Debug */,
+				90588D7FF0565E3CF136B9A0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		71EC5ED293053DEC5EFD893B /* Build configuration list for PBXNativeTarget "Pods-MHKitExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7774D6D191930BD629181CB9 /* Debug */,
+				13906BE02B5BF981D2B872F4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DF48A02502D433CA245E0696 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				41AA7C1492D56D9311566C11 /* Debug */,
+				6E224144A3A611D6292B405E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1351D8DCD1634E0DADC2E009 /* Project object */;
+}
