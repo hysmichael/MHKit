@@ -14,5 +14,6 @@
 @property UIScrollView *contentView;
 
 - (void) registerInputControl: (UIView *)control frameView:(UIView *) frame;
+- (void) dismissKeyboard;
 
 @end
