@@ -8,12 +8,14 @@
 
 #import "MHPageView.h"
 #import "MHViewLayoutManager.h"
+#import <UIImageView+WebCache.h>
 
 @interface MHPageView()
 
 @property (nonatomic, strong) UIScrollView *scrollView;
 @property (nonatomic, strong) UIPageControl *pageControl;
 @property NSTimer *timer;
+@property NSMutableArray *allPageViews;
 
 @property BOOL timerEnabled;
 
@@ -62,6 +64,7 @@
     for (UIView *subview in [self.scrollView subviews]) {
         [subview removeFromSuperview];
     }
+    self.allPageViews = [[NSMutableArray alloc] init];
     
     self.pageControl.numberOfPages = pageNum;
     self.pageControl.currentPage = 0;
@@ -77,9 +80,19 @@
         UIView *view = [[UIView alloc] initWithFrame:CGRectMake((i) * self.scrollView.frame.size.width, 0, self.scrollView.frame.size.width, self.scrollView.frame.size.height)];
         content_block(i, view);
         [self.scrollView addSubview:view];
+        [self.allPageViews addObject:view];
     }
     
     [self.scrollView setContentSize:CGSizeMake(self.scrollView.frame.size.width * pageNum, self.scrollView.frame.size.height)];
+}
+
+- (void) loadImageURLs:(NSArray *)images {
+    [self initializeView:^(NSUInteger pageNum, UIView * view) {
+        UIImageView *imageView = [[UIImageView alloc] initWithFrame:view.bounds];
+        imageView.contentMode = UIViewContentModeScaleAspectFit;
+        [imageView sd_setImageWithURL:[NSURL URLWithString:images[pageNum]]];
+        [view addSubview:imageView];
+    } totalPages:[images count]];
 }
 
 
@@ -94,6 +107,10 @@
         self.timer = [NSTimer scheduledTimerWithTimeInterval:time target:self selector:@selector(scrollingTimer) userInfo:nil repeats:YES];
         self.timerEnabled = true;
     }
+}
+
+- (void)setPageIndicatorHidden:(BOOL)hidden {
+    self.pageControl.hidden = hidden;
 }
 
 
@@ -112,6 +129,8 @@
     }
 }
 
+
+
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
     CGFloat width = scrollView.frame.size.width;
     float xPos = scrollView.contentOffset.x;
@@ -121,8 +140,21 @@
     
     // stop auto scrolling when user manutally scrolls
     [self.timer invalidate];
+    
+    if (self.userDidScroll) self.userDidScroll(self.pageControl.currentPage);
 }
 
+
+- (void)setToPageNumber:(NSUInteger)number animated:(BOOL)animated {
+    CGRect rect = CGRectMake((number) * self.scrollView.frame.size.width, 0, self.scrollView.frame.size.width, self.scrollView.frame.size.height);
+    [self.scrollView scrollRectToVisible:rect animated:animated];
+    self.pageControl.currentPage = number;
+}
+
+
+- (UIView *)viewForPageNumber:(NSUInteger)page {
+    return (UIView *)(self.allPageViews[page]);
+}
 
 @end
 
