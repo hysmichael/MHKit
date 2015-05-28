@@ -49,16 +49,12 @@
         } totalPages:[data count]];
         [self.pageView setPageIndicatorHidden:true];
         [self setUpPageViewActions];
+        self.pageView.alpha = 0.0;
         
         self.layerView = [[UIView alloc] init];
         self.layerView.frame = screeenBounds;
         self.layerView.backgroundColor = [UIColor blackColor];
-        
-        UIWindow *mainWindow = [[UIApplication sharedApplication] keyWindow];
         self.layerView.alpha = 0.0;
-        self.pageView.alpha = 0.0;
-        [mainWindow addSubview:self.layerView];
-        [mainWindow addSubview:self.pageView];
         
         self.dataSource = data;
         self.interfaceView = view;
@@ -78,7 +74,10 @@
     self.transitionView.contentMode = imageView.contentMode;
     CGRect windowFrame = [imageView.superview convertRect:imageView.frame toView:nil];
     self.transitionView.frame = windowFrame;
+    
     UIView *mainWindow = [[UIApplication sharedApplication] keyWindow];
+    [mainWindow addSubview:self.layerView];
+    [mainWindow addSubview:self.pageView];
     [mainWindow addSubview:self.transitionView];
     
     NSInteger pageNumber = imageView.tag;
@@ -120,6 +119,9 @@
         [UIView animateWithDuration:0.2 animations:^{
             weakSelf.pageView.alpha = 0.0;
             weakSelf.layerView.alpha = 0.0;
+        } completion:^(BOOL finished) {
+            [weakSelf.pageView removeFromSuperview];
+            [weakSelf.transitionView removeFromSuperview];
         }];
     }];
     [self.pageView setUserDidScroll:^(NSUInteger pageNumber) {
@@ -129,6 +131,14 @@
 
 - (UIView *)viewForZoomingInScrollView:(UIScrollView *)scrollView {
     return [scrollView viewWithTag:IMAGE_VIEW_TAG];
+}
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    CGPoint offset = scrollView.contentOffset;
+    CGSize contentSize = scrollView.contentSize;
+    CGFloat scale = scrollView.zoomScale;
+    offset.y = (contentSize.height * (1 - 1/scale)) / 2;
+    [scrollView setContentOffset:offset];
 }
 
 @end
