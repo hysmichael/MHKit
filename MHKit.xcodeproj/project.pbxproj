@@ -17,6 +17,10 @@
 		4C8884C51ABCD6E7000531AB /* MHKit.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4C8884C41ABCD6E7000531AB /* MHKit.h */; };
 		4C8884DD1ABCD731000531AB /* MHViewLayoutManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C8884DC1ABCD731000531AB /* MHViewLayoutManager.m */; };
 		4C8884E01ABCD752000531AB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C8884DF1ABCD752000531AB /* UIKit.framework */; };
+		4C92934B1B17D05B00B3A0FE /* MHSlimTableViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C9293491B17D05B00B3A0FE /* MHSlimTableViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4C92934C1B17D05B00B3A0FE /* MHSlimTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C92934A1B17D05B00B3A0FE /* MHSlimTableViewController.m */; };
+		4C92934D1B17D0CC00B3A0FE /* MHTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C8884E31ABCDC87000531AB /* MHTableView.m */; };
+		4C92934E1B17D10F00B3A0FE /* MHTableView.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C8884E21ABCDC87000531AB /* MHTableView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4CA81EA71B14F40E00BBF3DF /* MHImageViewer.h in Headers */ = {isa = PBXBuildFile; fileRef = 4CA81EA51B14F40E00BBF3DF /* MHImageViewer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4CA81EA81B14F40E00BBF3DF /* MHImageViewer.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CA81EA61B14F40E00BBF3DF /* MHImageViewer.m */; };
 		4CE65B3B1AF9E2ED00C244BC /* MHView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CE65B3A1AF9E2ED00C244BC /* MHView.m */; };
@@ -58,6 +62,8 @@
 		4C8884E31ABCDC87000531AB /* MHTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MHTableView.m; sourceTree = "<group>"; };
 		4C8884E91ABCDCD6000531AB /* UITableViewCellExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITableViewCellExtension.h; sourceTree = "<group>"; };
 		4C8884EA1ABCDCD6000531AB /* UITableViewCellExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITableViewCellExtension.m; sourceTree = "<group>"; };
+		4C9293491B17D05B00B3A0FE /* MHSlimTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MHSlimTableViewController.h; sourceTree = "<group>"; };
+		4C92934A1B17D05B00B3A0FE /* MHSlimTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MHSlimTableViewController.m; sourceTree = "<group>"; };
 		4CA81EA51B14F40E00BBF3DF /* MHImageViewer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MHImageViewer.h; path = MHKit/MHImageViewer.h; sourceTree = "<group>"; };
 		4CA81EA61B14F40E00BBF3DF /* MHImageViewer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MHImageViewer.m; path = MHKit/MHImageViewer.m; sourceTree = "<group>"; };
 		4CE65B391AF9E2ED00C244BC /* MHView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MHView.h; path = MHKit/MHView.h; sourceTree = "<group>"; };
@@ -174,6 +180,8 @@
 				4C8884E31ABCDC87000531AB /* MHTableView.m */,
 				4C8884E91ABCDCD6000531AB /* UITableViewCellExtension.h */,
 				4C8884EA1ABCDCD6000531AB /* UITableViewCellExtension.m */,
+				4C9293491B17D05B00B3A0FE /* MHSlimTableViewController.h */,
+				4C92934A1B17D05B00B3A0FE /* MHSlimTableViewController.m */,
 			);
 			name = "Table View";
 			sourceTree = "<group>";
@@ -238,6 +246,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C92934B1B17D05B00B3A0FE /* MHSlimTableViewController.h in Headers */,
 				4C22F64E1B058D5E0007B65F /* MHKit.h in Headers */,
 				4C22F64F1B058D5E0007B65F /* MHView.h in Headers */,
 				4C22F6561B058D5E0007B65F /* UIView+MHLayout.h in Headers */,
@@ -248,6 +257,7 @@
 				4C22F6541B058D5E0007B65F /* MHSwitcher.h in Headers */,
 				4CA81EA71B14F40E00BBF3DF /* MHImageViewer.h in Headers */,
 				4CEF2AFF1B1505CA00BCFDC6 /* MHPageView.h in Headers */,
+				4C92934E1B17D10F00B3A0FE /* MHTableView.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -352,6 +362,8 @@
 				4C8884DD1ABCD731000531AB /* MHViewLayoutManager.m in Sources */,
 				4CE65B4F1AF9E5EE00C244BC /* MHSwitcher.m in Sources */,
 				4CE65B3B1AF9E2ED00C244BC /* MHView.m in Sources */,
+				4C92934D1B17D0CC00B3A0FE /* MHTableView.m in Sources */,
+				4C92934C1B17D05B00B3A0FE /* MHSlimTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,5 +1,5 @@
 //
-//  ActionListViewController.m
+//  ActionlistView.m
 //  MHKit
 //
 //  Created by Michael Hong on 1/23/15.
@@ -8,6 +8,8 @@
 
 #import "MHTableView.h"
 #import "UITableViewCellExtension.h"
+
+#define kMinimalHeight 0.0001f
 
 @class ALSection;
 @class ALRow;
@@ -68,8 +70,19 @@
         row_i = 0;
         keyboardOpen = false;
         self.showSectionHeader = false;
+        self.mh_delegate = delegate;
+        
+        self.delegate = self;
+        self.dataSource = self;
+        
+        self.sectionSpacing = 15.0f;
+        self.exteriorSpacing = 30.0f;
     }
     return self;
+}
+
+- (void)willMoveToSuperview:(UIView *)newSuperview {
+    [self ready];
 }
 
 - (void) addSection:(NSString *)name {
@@ -130,6 +143,24 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return [((ALSection *)(data[section])).data count];
 }
+
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
+    CGFloat spacing;
+    if (section == 0) {
+        spacing = self.exteriorSpacing;
+    } else {
+        spacing = self.sectionSpacing;
+    }
+    if ([self tableView:tableView titleForHeaderInSection:section]) spacing += 25.0f;
+    if (spacing == 0) spacing = kMinimalHeight;
+    return spacing;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
+    if (section == [data count] - 1) return self.exteriorSpacing;
+    return kMinimalHeight;
+}
+
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     ALRow *aRow = [self rowAtIndexPath:indexPath];

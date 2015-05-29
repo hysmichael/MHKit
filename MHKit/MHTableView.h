@@ -1,5 +1,5 @@
 //
-//  ActionListViewController.h
+//  ActionlistView.h
 //  MHKit
 //
 //  Created by Michael Hong on 1/23/15.
@@ -20,6 +20,9 @@
 
 @property (weak) id<MHTableViewDelegate> mh_delegate;
 @property BOOL showSectionHeader;
+
+@property CGFloat sectionSpacing;
+@property CGFloat exteriorSpacing;
 
 -(void) addSection:(NSString *)name;
 
