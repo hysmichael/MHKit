@@ -17,3 +17,7 @@
 - (id) formValue;
 - (void) formIsRequired:(BOOL)required;
 @end
+
+@interface UITableViewCellValue1 : UITableViewCell
+
+@end

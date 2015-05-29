@@ -10,7 +10,7 @@
 #import "MHTableView.h"
 
 typedef enum MHSlimTableViewCellType_t {
-    MHCellText, MHCellDetail, MHCellTitle, MHCellRightText
+    MHCellEmpty, MHCellText, MHCellDetail, MHCellTitle, MHCellRightText, MHCellMultiLine
 } MHSlimTableViewCellType;
 
 
@@ -23,12 +23,14 @@ typedef enum MHSlimTableViewCellType_t {
 - (instancetype) initWithDelegate:(id) delegate;
 
 - (void) insert:(NSString *)identifier name:(NSString *)name presetType:(MHSlimTableViewCellType)type;
+- (void) insert:(NSString *)identifier name:(NSString *)name presetType:(MHSlimTableViewCellType)type rowHeight:(CGFloat) height;
 - (void) insert:(NSString *)identifier name:(NSString *)name customCell:(NSString *)cellName rowHeight:(CGFloat) height;
 - (void) insertSeperator;
+- (void) addIdentifier:(NSString *)identifier;
 
 - (MHTableView *) _tableView;
 - (void) reloadTableView;
 - (void) reloadIdentifier:(NSString *)identifier;
-
+- (void) reloadIdentifier:(NSString *)identifier withRowAnimation:(UITableViewRowAnimation) animation;
 
 @end

@@ -7,6 +7,8 @@
 //
 
 #import "MHSlimTableViewController.h"
+#import "MHTableViewCell.h"
+#import "UITableViewCellExtension.h"
 
 @interface MHSlimTableViewController()
 
@@ -17,7 +19,6 @@
 
 @end
 
-#define PresetCell_Value1 @"MPCellValue1"
 #define PresetCell_Seperator @"SCSeperatorCell"
 
 @implementation MHSlimTableViewController {
@@ -35,6 +36,7 @@
         rowN = 0;
         self.presetAttributes = [[NSMutableDictionary alloc] init];
         self.identifierMap = [[NSMutableDictionary alloc] init];
+        self.indexPathMap = [[NSMutableDictionary alloc] init];
         
         self.tableView.exteriorSpacing = 5.0;
         self.tableView.sectionSpacing = 0.0;
@@ -45,25 +47,57 @@
     return self;
 }
 
+- (NSIndexPath *) linkIdentifier: (NSString *)identifier {
+    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:rowN inSection:sectionN];
+    if (identifier) {
+        NSArray *tokens = [identifier componentsSeparatedByString:@" "];
+        for (NSString *token in tokens) {
+            if (self.indexPathMap[token]) {
+                NSMutableArray *indexPathArray = (NSMutableArray *)self.indexPathMap[token];
+                [indexPathArray addObject:indexPath];
+            } else {
+                self.indexPathMap[token] = [NSMutableArray arrayWithObject:indexPath];
+            }
+        }
+        NSMutableArray *normalizedTokens = [NSMutableArray array];
+        for (NSString *token in tokens) {
+            NSArray *subTokens = [token componentsSeparatedByString:@"_"];
+            NSMutableString *normalizedToken = [NSMutableString string];
+            for (NSString *subToken in subTokens) {
+                [normalizedToken appendString:[subToken capitalizedString]];
+            }
+            [normalizedTokens addObject:normalizedToken];
+        }
+        if (self.identifierMap[indexPath]) {
+            [self.identifierMap[indexPath] addObjectsFromArray:normalizedTokens];
+        } else {
+            self.identifierMap[indexPath] = normalizedTokens;
+        }
+    }
+    return indexPath;
+}
+
 - (void)insert:(NSString *)identifier name:(NSString *)name presetType:(MHSlimTableViewCellType)type {
-    if (type == MHCellDetail) {
-        [self.tableView addRow:name cellClassString:PresetCell_Value1 height:self.defaultRowHeight];
+    [self insert:identifier name:name presetType:type rowHeight:self.defaultRowHeight];
+}
+
+- (void)insert:(NSString *)identifier name:(NSString *)name presetType:(MHSlimTableViewCellType)type rowHeight:(CGFloat)height {
+    if (type == MHCellEmpty) {
+        [self.tableView addRow:name cellClassString:@"MHTableViewCell" height:height];
+    } else if (type == MHCellDetail) {
+        [self.tableView addRow:name cellClassString:@"UITableViewCellValue1" height:height];
     } else {
-        [self.tableView addRow:name cellClassString:@"UITableViewCell" height:self.defaultRowHeight];
+        [self.tableView addRow:name cellClassString:@"UITableViewCell" height:height];
     }
     
-    self.presetAttributes[identifier] = @(type);
-    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:rowN inSection:sectionN];
-    self.identifierMap[indexPath] = identifier;
-    self.indexPathMap[identifier] = indexPath;
+    NSIndexPath *indexPath = [self linkIdentifier:identifier];
+    self.presetAttributes[indexPath] = @(type);
     rowN ++;
 }
 
 - (void)insert:(NSString *)identifier name:(NSString *)name customCell:(NSString *)cellName rowHeight:(CGFloat)height {
     [self.tableView addRow:name cellClassString:cellName height:height];
-    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:rowN inSection:sectionN];
-    self.identifierMap[indexPath] = identifier;
-    self.indexPathMap[identifier] = indexPath;
+    [self linkIdentifier:identifier];
     rowN ++;
 }
 
@@ -74,6 +108,12 @@
     rowN = 0;
 }
 
+- (void)addIdentifier:(NSString *)identifier {
+    rowN --;
+    [self linkIdentifier:identifier];
+    rowN ++;
+}
+
 - (void)renderCellContents:(UITableViewCell *)cell atSection:(NSUInteger)section atRow:(NSUInteger)row {
     NSIndexPath *indexPath = [NSIndexPath indexPathForRow:row inSection:section];
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
@@ -81,9 +121,9 @@
         cell.textLabel.font = self.defaultFont;
         cell.detailTextLabel.font = self.defaultFont;
     }
-    NSString *identifier = self.identifierMap[indexPath];
-    if (identifier) {
-        NSNumber *presetType = self.presetAttributes[identifier];
+    NSArray *identifiers = self.identifierMap[indexPath];
+    if (identifiers) {
+        NSNumber *presetType = self.presetAttributes[indexPath];
         if (presetType) {
             MHSlimTableViewCellType preset_t = (MHSlimTableViewCellType)[presetType integerValue];
             switch (preset_t) {
@@ -95,26 +135,30 @@
                     cell.textLabel.textAlignment = NSTextAlignmentRight;
                     break;
                     
+                case MHCellMultiLine:
+                    cell.textLabel.numberOfLines = 0;
+                    cell.textLabel.lineBreakMode = NSLineBreakByWordWrapping;
+                    
                 default:
                     break;
             }
         }
         
-        NSMutableString *normalizedIdentifier = [[identifier capitalizedString] mutableCopy];
-        [normalizedIdentifier replaceOccurrencesOfString:@" " withString:@"" options:0 range:NSMakeRange(0, [normalizedIdentifier length])];
-        SEL action = NSSelectorFromString([NSString stringWithFormat:@"render%@:", normalizedIdentifier]);
-        [self performSelectorOnDelegate:action withObject:cell];
+        for (NSString *identifier in identifiers) {
+            SEL action = NSSelectorFromString([NSString stringWithFormat:@"render%@:", identifier]);
+            [self performSelectorOnDelegate:action withObject:cell];
+        }
     }
 }
 
 - (void)registerCellActionsAtSection:(NSUInteger)section atRow:(NSUInteger)row {
     NSIndexPath *indexPath = [NSIndexPath indexPathForRow:row inSection:section];
-    NSString *identifier = self.identifierMap[indexPath];
-    if (identifier) {
-        NSMutableString *normalizedIdentifier = [[identifier capitalizedString] mutableCopy];
-        [normalizedIdentifier replaceOccurrencesOfString:@" " withString:@"" options:0 range:NSMakeRange(0, [normalizedIdentifier length])];
-        SEL action = NSSelectorFromString([NSString stringWithFormat:@"onClick%@:", normalizedIdentifier]);
-        [self performSelectorOnDelegate:action withObject:nil];
+    NSArray *identifiers = self.identifierMap[indexPath];
+    if (identifiers) {
+        for (NSString *identifier in identifiers) {
+            SEL action = NSSelectorFromString([NSString stringWithFormat:@"onClick%@", identifier]);
+            [self performSelectorOnDelegate:action withObject:nil];
+        }
     }
 }
 
@@ -140,9 +184,19 @@
 }
 
 - (void)reloadIdentifier:(NSString *)identifier {
-    NSIndexPath *indexPath = self.indexPathMap[identifier];
-    if (indexPath) {
-        [self.tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationNone];
+    [self reloadIdentifier:identifier withRowAnimation:UITableViewRowAnimationNone];
+}
+
+- (void)reloadIdentifier:(NSString *)identifier withRowAnimation:(UITableViewRowAnimation)animation {
+    NSMutableArray *allIndexPaths = [NSMutableArray array];
+    NSArray *tokens = [identifier componentsSeparatedByString:@" "];
+    for (NSString *token in tokens) {
+        if (self.indexPathMap[token]) {
+            [allIndexPaths addObjectsFromArray:self.indexPathMap[token]];
+        }
+    }
+    if ([allIndexPaths count] > 0) {
+        [self.tableView reloadRowsAtIndexPaths:allIndexPaths withRowAnimation:animation];
     }
 }
 

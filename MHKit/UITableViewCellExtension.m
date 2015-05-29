@@ -17,3 +17,13 @@
 - (id)formValue { return nil; }
 - (void)formIsRequired:(BOOL)required {}
 @end
+
+
+@implementation UITableViewCellValue1
+
+- (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
+    self = [super initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:reuseIdentifier];
+    return self;
+}
+
+@end

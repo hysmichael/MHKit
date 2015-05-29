@@ -8,6 +8,7 @@
 
 #import "MHTableView.h"
 #import "UITableViewCellExtension.h"
+#import "MHTableViewCell.h"
 
 #define kMinimalHeight 0.0001f
 
@@ -102,7 +103,9 @@
 
 - (void) addRow:(NSString *)name cellClassString:(NSString *)cellClassString height:(CGFloat)height {
     ALRow *newRow = [[ALRow alloc] initWithName:name index:row_i];
-    newRow.cellClass = (cellClassString ? cellClassString : @"UITableViewCell");
+//    newRow.cellClass = (cellClassString ? cellClassString : @"UITableViewCell");
+    /* MHTableViewCell overrides the default font */
+    newRow.cellClass = (cellClassString ? cellClassString : @"MHTableViewCell");
     newRow.height = (height > 0) ? height : 44.0;
     [(ALSection *)(data[section_i - 1]) addRow:newRow];
     row_i++;

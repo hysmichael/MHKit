@@ -31,6 +31,12 @@
 		4CEF2AE81B14FA8B00BCFDC6 /* UIView+MHKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 4CEF2AE61B14FA8B00BCFDC6 /* UIView+MHKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4CEF2AE91B14FA8B00BCFDC6 /* UIView+MHKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CEF2AE71B14FA8B00BCFDC6 /* UIView+MHKit.m */; };
 		4CEF2AFF1B1505CA00BCFDC6 /* MHPageView.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C22F6581B058D8E0007B65F /* MHPageView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4CF3F8B41B18E21200D5EA4A /* MHLabel.h in Headers */ = {isa = PBXBuildFile; fileRef = 4CF3F8B21B18E21200D5EA4A /* MHLabel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4CF3F8B51B18E21200D5EA4A /* MHLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CF3F8B31B18E21200D5EA4A /* MHLabel.m */; };
+		4CF3F8BA1B18FB8300D5EA4A /* MHTableViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 4CF3F8B81B18FB8300D5EA4A /* MHTableViewCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4CF3F8BB1B18FB8300D5EA4A /* MHTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CF3F8B91B18FB8300D5EA4A /* MHTableViewCell.m */; };
+		4CF3F8BC1B18FC0C00D5EA4A /* UITableViewCellExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C8884E91ABCDCD6000531AB /* UITableViewCellExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4CF3F8BD1B18FC1000D5EA4A /* UITableViewCellExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C8884EA1ABCDCD6000531AB /* UITableViewCellExtension.m */; };
 		4CF422531B0428590001F47B /* UIView+MHLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CF422521B0428590001F47B /* UIView+MHLayout.m */; };
 		8CF7E5344445E510F6B8AB2F /* libPods-MHKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FFD782EC4F2A6D5A028817CD /* libPods-MHKit.a */; };
 /* End PBXBuildFile section */
@@ -76,6 +82,10 @@
 		4CE65B4E1AF9E5EE00C244BC /* MHSwitcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MHSwitcher.m; path = MHKit/MHSwitcher.m; sourceTree = "<group>"; };
 		4CEF2AE61B14FA8B00BCFDC6 /* UIView+MHKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+MHKit.h"; sourceTree = "<group>"; };
 		4CEF2AE71B14FA8B00BCFDC6 /* UIView+MHKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+MHKit.m"; sourceTree = "<group>"; };
+		4CF3F8B21B18E21200D5EA4A /* MHLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MHLabel.h; path = MHKit/MHLabel.h; sourceTree = "<group>"; };
+		4CF3F8B31B18E21200D5EA4A /* MHLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MHLabel.m; path = MHKit/MHLabel.m; sourceTree = "<group>"; };
+		4CF3F8B81B18FB8300D5EA4A /* MHTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MHTableViewCell.h; sourceTree = "<group>"; };
+		4CF3F8B91B18FB8300D5EA4A /* MHTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MHTableViewCell.m; sourceTree = "<group>"; };
 		4CF422511B0428590001F47B /* UIView+MHLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+MHLayout.h"; sourceTree = "<group>"; };
 		4CF422521B0428590001F47B /* UIView+MHLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+MHLayout.m"; sourceTree = "<group>"; };
 		CE051B4841FBA11E0C3AB90B /* Pods-MHKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MHKit.release.xcconfig"; path = "../Pods/Target Support Files/Pods-MHKit/Pods-MHKit.release.xcconfig"; sourceTree = "<group>"; };
@@ -178,6 +188,8 @@
 			children = (
 				4C8884E21ABCDC87000531AB /* MHTableView.h */,
 				4C8884E31ABCDC87000531AB /* MHTableView.m */,
+				4CF3F8B81B18FB8300D5EA4A /* MHTableViewCell.h */,
+				4CF3F8B91B18FB8300D5EA4A /* MHTableViewCell.m */,
 				4C8884E91ABCDCD6000531AB /* UITableViewCellExtension.h */,
 				4C8884EA1ABCDCD6000531AB /* UITableViewCellExtension.m */,
 				4C9293491B17D05B00B3A0FE /* MHSlimTableViewController.h */,
@@ -217,6 +229,8 @@
 				4CE65B4E1AF9E5EE00C244BC /* MHSwitcher.m */,
 				4C22F6581B058D8E0007B65F /* MHPageView.h */,
 				4C22F6591B058D8E0007B65F /* MHPageView.m */,
+				4CF3F8B21B18E21200D5EA4A /* MHLabel.h */,
+				4CF3F8B31B18E21200D5EA4A /* MHLabel.m */,
 			);
 			name = Control;
 			path = ..;
@@ -250,11 +264,14 @@
 				4C22F64E1B058D5E0007B65F /* MHKit.h in Headers */,
 				4C22F64F1B058D5E0007B65F /* MHView.h in Headers */,
 				4C22F6561B058D5E0007B65F /* UIView+MHLayout.h in Headers */,
+				4CF3F8B41B18E21200D5EA4A /* MHLabel.h in Headers */,
 				4C22F6571B058D5E0007B65F /* MHViewLayoutManager.h in Headers */,
 				4C22F6501B058D5E0007B65F /* MHEmptyView.h in Headers */,
+				4CF3F8BA1B18FB8300D5EA4A /* MHTableViewCell.h in Headers */,
 				4CEF2AE81B14FA8B00BCFDC6 /* UIView+MHKit.h in Headers */,
 				4C22F6511B058D5E0007B65F /* MHKeyboardAdaptiveView.h in Headers */,
 				4C22F6541B058D5E0007B65F /* MHSwitcher.h in Headers */,
+				4CF3F8BC1B18FC0C00D5EA4A /* UITableViewCellExtension.h in Headers */,
 				4CA81EA71B14F40E00BBF3DF /* MHImageViewer.h in Headers */,
 				4CEF2AFF1B1505CA00BCFDC6 /* MHPageView.h in Headers */,
 				4C92934E1B17D10F00B3A0FE /* MHTableView.h in Headers */,
@@ -356,11 +373,14 @@
 				4CE65B4C1AF9E5E600C244BC /* MHKeyboardAdaptiveView.m in Sources */,
 				4CA81EA81B14F40E00BBF3DF /* MHImageViewer.m in Sources */,
 				4CE65B4B1AF9E5E600C244BC /* MHEmptyView.m in Sources */,
+				4CF3F8BD1B18FC1000D5EA4A /* UITableViewCellExtension.m in Sources */,
 				4CEF2AE91B14FA8B00BCFDC6 /* UIView+MHKit.m in Sources */,
 				4CF422531B0428590001F47B /* UIView+MHLayout.m in Sources */,
+				4CF3F8B51B18E21200D5EA4A /* MHLabel.m in Sources */,
 				4CEF2AE21B14F70600BCFDC6 /* MHPageView.m in Sources */,
 				4C8884DD1ABCD731000531AB /* MHViewLayoutManager.m in Sources */,
 				4CE65B4F1AF9E5EE00C244BC /* MHSwitcher.m in Sources */,
+				4CF3F8BB1B18FB8300D5EA4A /* MHTableViewCell.m in Sources */,
 				4CE65B3B1AF9E2ED00C244BC /* MHView.m in Sources */,
 				4C92934D1B17D0CC00B3A0FE /* MHTableView.m in Sources */,
 				4C92934C1B17D05B00B3A0FE /* MHSlimTableViewController.m in Sources */,
