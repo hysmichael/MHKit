@@ -11,8 +11,8 @@
 #import "UIView+MHKit.h"
 #import <UIImageView+WebCache.h>
 
-#define SCROLL_VIEW_TAG 1
-#define IMAGE_VIEW_TAG 2
+#define IMAGE_VIEW_TAG 1
+#define SCROLL_VIEW_TAG_BASE 100
 
 @interface MHImageViewer ()
 
@@ -37,7 +37,7 @@
             UIScrollView *innerScrollView = [[UIScrollView alloc] initWithFrame:view.bounds];
             innerScrollView.contentSize = view.bounds.size;
             innerScrollView.delegate = self;
-            innerScrollView.tag = SCROLL_VIEW_TAG;
+            innerScrollView.tag = pageNum + SCROLL_VIEW_TAG_BASE;
             innerScrollView.maximumZoomScale = 1.5;
             innerScrollView.showsHorizontalScrollIndicator = false;
             innerScrollView.showsVerticalScrollIndicator = false;
@@ -94,7 +94,7 @@
 }
 
 - (void) loadImageOnPage: (NSUInteger) number withExistingImage:(UIImage *) image {
-    UIScrollView *scrollView = (UIScrollView *)[[self.pageView viewForPageNumber:number] viewWithTag:SCROLL_VIEW_TAG];
+    UIScrollView *scrollView = (UIScrollView *)[[self.pageView viewForPageNumber:number] viewWithTag:number + SCROLL_VIEW_TAG_BASE];
     UIImageView *backgroundImageView = (UIImageView *)[scrollView viewWithTag:IMAGE_VIEW_TAG];
     if (scrollView.zoomScale > 1.0) [scrollView setZoomScale:1.0 animated:true];
     if (!backgroundImageView.image) {
@@ -133,12 +133,37 @@
     return [scrollView viewWithTag:IMAGE_VIEW_TAG];
 }
 
-- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate {
+    [self resetScrollViewOffset:scrollView withBoundsCheck:decelerate];
+}
+
+-(void)scrollViewWillBeginDecelerating:(UIScrollView *)scrollView{
+    [self resetScrollViewOffset:scrollView withBoundsCheck:true];
+}
+
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
+    [self resetScrollViewOffset:scrollView withBoundsCheck:false];
+}
+
+- (void)resetScrollViewOffset:(UIScrollView *)scrollView withBoundsCheck:(BOOL) boundsCheck {
     CGPoint offset = scrollView.contentOffset;
     CGSize contentSize = scrollView.contentSize;
     CGFloat scale = scrollView.zoomScale;
+    if (scale > scrollView.maximumZoomScale) scale = scrollView.maximumZoomScale;
+    NSInteger pageNum = scrollView.tag - SCROLL_VIEW_TAG_BASE;
+    if ((offset.x < 0 && pageNum == 0) || (offset.x + scrollView.bounds.size.width > contentSize.width && pageNum == [self.dataSource count] - 1)) {
+        if (pageNum == 0) {
+            offset.x = 0;
+        } else {
+            offset.x = contentSize.width - scrollView.bounds.size.width;
+        }
+    } else {
+        if (boundsCheck) {
+            if (offset.x < 0 || offset.x + scrollView.bounds.size.width > contentSize.width) return;
+        }
+    }
     offset.y = (contentSize.height * (1 - 1/scale)) / 2;
-    [scrollView setContentOffset:offset];
+    [scrollView setContentOffset:offset animated:YES];
 }
 
 @end
