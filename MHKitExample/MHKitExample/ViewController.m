@@ -11,23 +11,28 @@
 
 @interface ViewController ()
 
-@property UIView *view1;
-@property UIView *view2;
+@property UITextView *view1;
+@property UITextView *view2;
+@property int counter;
 
 @end
 
 @implementation ViewController
 
-- (UIView *)newView {
-    UIView *view = [[UIView alloc] init];
+- (UITextView *)newView {
+    self.counter ++;
+    UITextView *view = [[UITextView alloc] init];
     CGFloat hue = (CGFloat)(arc4random_uniform(256)) / 255.0;
     view.backgroundColor = [UIColor colorWithHue:hue saturation:0.8 brightness:0.8 alpha:0.5];
+    view.text = [NSString stringWithFormat:@"View %d", self.counter];
+    view.textAlignment = NSTextAlignmentCenter;
     [self.contentView addSubview:view];
     return view;
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.counter = 0;
     self.contentView.layer.borderColor = [UIColor lightGrayColor].CGColor;
     self.contentView.layer.borderWidth = 2.0f;
     self.view1 = [self newView];
