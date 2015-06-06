@@ -184,7 +184,7 @@
 }
 
 - (void)reloadIdentifier:(NSString *)identifier {
-    [self reloadIdentifier:identifier withRowAnimation:UITableViewRowAnimationNone];
+    [self reloadIdentifier:identifier withRowAnimation:UITableViewRowAnimationAutomatic];
 }
 
 - (void)reloadIdentifier:(NSString *)identifier withRowAnimation:(UITableViewRowAnimation)animation {
