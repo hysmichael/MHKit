@@ -8,6 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
+/*
+ MHLayout Tutorial:
+ http://hongyanshu.com/ideas/uiviewmhlayout/
+ */
+
 typedef int MHLayoutPosition;
 typedef CGFloat MHLayoutLength;
 
@@ -30,6 +35,8 @@ typedef enum MHMarginEdge_enum {
 - (CGRect) layoutDiagonal:(CGPoint) counterpoint;
 
 - (CGRect) layoutAdaptiveWithFixedWidth:(MHLayoutLength) w_para anchor:(MHLayoutPosition) position margin:(MHMarginEdge) edges;
+
+- (CGRect) snapPosition:(MHLayoutPosition) position;
 
 @end
 

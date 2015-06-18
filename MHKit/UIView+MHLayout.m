@@ -56,6 +56,13 @@
     return [[MHLayout currentManager] setView:self width:w_para height:self.bounds.size.height respectToPosition:position applyGuideLine:(MHViewLayoutGuideLine)edges];
 }
 
+- (CGRect)snapPosition:(MHLayoutPosition)position {
+    return [self layoutWidth:CGRectGetWidth(self.bounds)
+                      height:CGRectGetHeight(self.bounds)
+                      anchor:position
+                      margin:0];
+}
+
 @end
 
 @implementation MHLayout
