@@ -22,6 +22,9 @@
 @property UIImageView *transitionView;
 @property (weak) UIView *interfaceView;
 
+@property (weak) UIScrollView *scrollViewInActive;
+@property NSInteger lastActiveBoundsChangeNotificationID;
+
 @end
 
 @implementation MHImageViewer
@@ -133,16 +136,23 @@
     return [scrollView viewWithTag:IMAGE_VIEW_TAG];
 }
 
-- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate {
-    [self resetScrollViewOffset:scrollView withBoundsCheck:decelerate];
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    if (self.scrollViewInActive != scrollView) {
+        self.scrollViewInActive = scrollView;
+        self.lastActiveBoundsChangeNotificationID = 0;
+    }
+    self.lastActiveBoundsChangeNotificationID ++;
+    NSInteger currentNotificationID = self.lastActiveBoundsChangeNotificationID;
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.05 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        if (currentNotificationID == self.lastActiveBoundsChangeNotificationID) {
+            self.lastActiveBoundsChangeNotificationID = 0;
+            [self resetScrollViewOffset:scrollView withBoundsCheck:NO];
+        }
+    });
 }
 
 -(void)scrollViewWillBeginDecelerating:(UIScrollView *)scrollView{
-    [self resetScrollViewOffset:scrollView withBoundsCheck:true];
-}
-
-- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
-    [self resetScrollViewOffset:scrollView withBoundsCheck:false];
+    [self resetScrollViewOffset:scrollView withBoundsCheck:YES];
 }
 
 - (void)resetScrollViewOffset:(UIScrollView *)scrollView withBoundsCheck:(BOOL) boundsCheck {

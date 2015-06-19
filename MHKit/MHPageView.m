@@ -138,10 +138,12 @@
     // calculate the page we are on based on x coordinate position and width of scroll view
     self.pageControl.currentPage = (lround(xPos / width));
     
+    if (self.userDidScroll) self.userDidScroll(self.pageControl.currentPage);
+}
+
+- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView {
     // stop auto scrolling when user manutally scrolls
     [self.timer invalidate];
-    
-    if (self.userDidScroll) self.userDidScroll(self.pageControl.currentPage);
 }
 
 
