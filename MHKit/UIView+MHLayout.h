@@ -9,8 +9,20 @@
 #import <UIKit/UIKit.h>
 
 /*
- MHLayout Tutorial:
+ 
+ MHLayout is a lightweight layout engine that I devised for layouting
+ out views throughtout this app. I should have used Auto Layout but 
+ describing layout with constraints is not quite intuitive as describing
+ it using a layout procedure (like a step-by-step recipe).
+ 
+ MHLayout and its category on UIView are wrappers around the more
+ primitive MHViewLayoutManager. MHLayout requires fewer boilerplate codes
+ and is more auto completion friendly. It also eliminates direct 
+ management and interaction with the MHViewLayoutManager behind the scene.
+ 
+ The full tutorial is here:
  http://hongyanshu.com/ideas/uiviewmhlayout/
+ 
  */
 
 typedef int MHLayoutPosition;

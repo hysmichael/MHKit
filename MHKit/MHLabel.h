@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
+/* MHLabel is a simple subclass of UILabel that
+ allows customizable margins around its contents */
+
 @interface MHLabel : UILabel
 
 @property UIEdgeInsets textInsets;

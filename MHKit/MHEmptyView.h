@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
+/* empty views are used when a collection-type view 
+ is empty */
+
 @interface MHEmptyView : UIView
 
 @property UILabel *caption;

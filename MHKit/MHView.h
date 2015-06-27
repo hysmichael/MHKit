@@ -9,6 +9,9 @@
 #import <UIKit/UIKit.h>
 #import "MHViewLayoutManager.h"
 
+/* MHView allows inline drawing code and layout code without subclassing
+ UIView */
+
 @interface MHView : UIView
 
 - (void) initialize;
