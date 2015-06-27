@@ -1,0 +1,10 @@
+PODS:
+  - MHKit (0.1)
+
+DEPENDENCIES:
+  - MHKit
+
+SPEC CHECKSUMS:
+  MHKit: 1bdc4e4afa8fc2ecf76d0b538ea0a7527fe6c911
+
+COCOAPODS: 0.36.0

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>35B096DC-5765-48AD-ACC7-8C2078C5298E</string>
+	<key>IDESourceControlProjectName</key>
+	<string>MHKit</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>26DD1E4A17F2B1DA542BE86EEAA16C7F0AD3BA43</key>
+		<string>https://github.com/hysmichael/MHKit.git</string>
+		<key>DCD2E498902D0AD42339CCBBA6A7C3C32E0DD5DD</key>
+		<string>https://bitbucket.org/tobiaslei/stylepuzzleios.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>MHKit.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>26DD1E4A17F2B1DA542BE86EEAA16C7F0AD3BA43</key>
+		<string>../..</string>
+		<key>DCD2E498902D0AD42339CCBBA6A7C3C32E0DD5DD</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/hysmichael/MHKit.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>26DD1E4A17F2B1DA542BE86EEAA16C7F0AD3BA43</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>DCD2E498902D0AD42339CCBBA6A7C3C32E0DD5DD</string>
+			<key>IDESourceControlWCCName</key>
+			<string></string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>26DD1E4A17F2B1DA542BE86EEAA16C7F0AD3BA43</string>
+			<key>IDESourceControlWCCName</key>
+			<string>MHKit</string>
+		</dict>
+	</array>
+</dict>
+</plist>
