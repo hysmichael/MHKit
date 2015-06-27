@@ -16,6 +16,7 @@
 @property UITextView *view3;
 @property UITextView *view4;
 @property UITextView *view5;
+
 @property int counter;
 
 @end
